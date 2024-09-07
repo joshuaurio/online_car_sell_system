@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    /* it makis the items in to the maring */
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    /* to add image as back graund */
+    /* background-image: url(joshua.jpeg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* to add text format */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgb(0,0,0,0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    /* to align the to lesft */
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a {
+    /* to aling the text to the middal of nav */
+    height: 100%;
+    /* to add speace between */
+    padding: 0 30px;
+    /* to remove underline on a link */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    /* to hover to the links withe different color */
+    background-color: #f0f0f0;
+}
+/* to add log to left */
+nav li:first-child{
+    margin-right: auto;
+}
+
+/* to add sid ber */
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    /* by incrising or dicresing the blur  iffrct us last values belwor */
+    background-color: rgba(255, 255, 255, 0.096);
+    /* to blur or to see glass effect on side ber 2  */
+    backdrop-filter: blur(10px);
+    /* to give shadow  */
+    box-shadow: -10px 0 10px rgb(0,0,0,0.1);
+    /* hii ina control said bar ya pili 2 kuonekana au isionekane kwa kueka none au flex*/
+    display: none;
+    /* to move all text to the box*/
+    flex-direction: column;
+    /* to move all text to left */
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+/* to mack all items to fill intire space */
+.sidebar li{
+    width: 100%;
+}
+/* to mack all items to fill intire space */
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+/* to make itemes notvizible in scree less than 800px. You can change the screen size if you whant  */
+/* this is cold midiam quary */
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
